@@ -1,0 +1,9 @@
+project: ramulator
+target: ramulator
+image: ghcr.io/rnshah9/playground:ramulator
+
+cmds:
+  - cmd: /repo/ramulator /repo/configs/DDR-3config.cfg --mode=dram @@
+    afl: false
+    env:
+      DISABLE_SMOKETEST: '1'
